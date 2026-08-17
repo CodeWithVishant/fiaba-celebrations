@@ -17,3 +17,15 @@ if(herStrip && herLeft && herRight){
   herLeft.addEventListener('click',()=>herStrip.scrollBy({left:-280,behavior:'smooth'}));
   herRight.addEventListener('click',()=>herStrip.scrollBy({left:280,behavior:'smooth'}));
 }
+const bgMusic = document.getElementById("bgMusic");
+const musicButton = document.getElementById("music");
+
+musicButton.addEventListener("click", () => {
+    if (bgMusic.paused) {
+        bgMusic.play();
+        musicButton.textContent = "🔊";
+    } else {
+        bgMusic.pause();
+        musicButton.textContent = "♫";
+    }
+});
